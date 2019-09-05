@@ -50,7 +50,7 @@ x = linspace(0,1,1000);
 phs = linspace(0,2*pi,1000);
 [X,Phs] = meshgrid(x,phs);
 R = exp(b(1)+((-1/2)*((X-b(2))/b(3)).^2)).*...
-    exp(b(4)*(cos(Phs-b(6)+ b(5)*(X-b(2)))-1));
+    exp(b(4)*(cos(Phs-(b(6)+ b(5)*(X-b(2))))-1));
 im = imagesc(x,phs,R);
 colormap('summer')
 set(gca,'YDir','normal');
